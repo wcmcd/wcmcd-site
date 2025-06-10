@@ -4,12 +4,69 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>WCMCD</title>
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(145deg, #0d0d0d, #1a1a1a);
+      color: #e0e0e0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 20px;
+    }
+
+    img.logo {
+      max-width: 300px;
+      height: auto;
+      margin-bottom: 20px;
+      filter: drop-shadow(0 0 10px #00ffa3) drop-shadow(0 0 20px #dc1fff);
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      margin: 10px 0;
+      background: linear-gradient(90deg, #00ffa3, #dc1fff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin-top: 0;
+      color: #cccccc;
+    }
+
+    .twitter-link {
+      margin-top: 30px;
+      padding: 12px 24px;
+      background: linear-gradient(90deg, #00ffa3, #dc1fff);
+      color: black;
+      border: none;
+      border-radius: 30px;
+      font-size: 1rem;
+      cursor: pointer;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 0 10px #00ffa3, 0 0 20px #dc1fff;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .twitter-link:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px #00ffa3, 0 0 30px #dc1fff;
+    }
+  </style>
 </head>
 <body>
   <img src="wcmcd_logo_BG.png" alt="WCMCD Logo" class="logo" />
-  <h1>WCMCD</h1>
-  <p>A new era of memecoin madness. Stay tuned.</p>
-  <p>Follow us on <a href="https://x.com/wcmcd_official" target="_blank">Twitter</a> and stay tuned.</p>
+  <h1>A new era of memecoin madness. Stay tuned.</h1>
+  <p>We're quietly building the most degenerate global action in crypto history.</p>
+  <a href="https://x.com/wcmcd_official" class="twitter-link" target="_blank">Follow us on Twitter</a>
 </body>
 </html>
