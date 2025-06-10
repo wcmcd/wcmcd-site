@@ -10,14 +10,15 @@
       margin: 0;
       padding: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #0b0b2c, #1e1b3a, #151528);
+      background: linear-gradient(135deg, #0a091c, #1d1a3f, #131324);
       background-size: 400% 400%;
       animation: gradientBG 15s ease infinite;
       color: #f0f0f0;
-      min-height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
+      min-height: 100vh;
+      text-align: center;
     }
 
     @keyframes gradientBG {
@@ -26,25 +27,27 @@
       100% { background-position: 0% 50%; }
     }
 
-    .content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+    .container {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 60px 40px;
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+      max-width: 700px;
+      width: 90%;
       text-align: center;
-      padding: 40px 20px;
+      backdrop-filter: blur(8px);
     }
 
     img.logo {
       max-width: 300px;
       height: auto;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
       filter: drop-shadow(0 0 10px #00ffa3) drop-shadow(0 0 20px #dc1fff);
     }
 
     h1 {
       font-size: 2.2rem;
-      margin: 10px 0;
+      margin: 10px 0 20px;
       background: linear-gradient(90deg, #00ffa3, #dc1fff);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -53,14 +56,10 @@
     p {
       font-size: 1.2rem;
       color: #cccccc;
-      text-align: center;
-      margin: 10px 0;
-      max-width: 700px;
-      line-height: 1.6;
+      margin-bottom: 30px;
     }
 
     .twitter-link {
-      margin-top: 30px;
       padding: 12px 24px;
       background: linear-gradient(90deg, #00ffa3, #dc1fff);
       color: black;
@@ -81,7 +80,7 @@
   </style>
 </head>
 <body>
-  <div class="content">
+  <div class="container">
     <img src="wcmcd_logo_BG.png" alt="WCMCD Logo" class="logo" />
     <h1>A new era of memecoin madness. Stay tuned.</h1>
     <p>We're quietly building the most degenerate global action in crypto history.</p>
