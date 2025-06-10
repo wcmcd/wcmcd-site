@@ -10,7 +10,7 @@
       margin: 0;
       padding: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #05030f, #1a133a, #0e0e1a);
+      background: linear-gradient(135deg, #050505, #151122, #0b0c1c);
       background-size: 400% 400%;
       animation: gradientBG 15s ease infinite;
       color: #f0f0f0;
@@ -18,7 +18,6 @@
       justify-content: center;
       align-items: center;
       min-height: 100vh;
-      overflow: hidden;
     }
 
     @keyframes gradientBG {
@@ -28,45 +27,51 @@
     }
 
     .content-tile {
-      background: rgba(0, 0, 0, 0.6);
+      background: rgba(20, 20, 30, 0.75);
       border-radius: 20px;
-      padding: 40px 30px;
-      box-shadow: 0 0 20px rgba(220, 31, 255, 0.4), 0 0 40px rgba(0, 255, 163, 0.2);
-      backdrop-filter: blur(10px);
+      padding: 40px 50px;
       text-align: center;
+      box-shadow: 0 0 30px #00ffa3, 0 0 60px #dc1fff;
+      backdrop-filter: blur(10px);
+      max-width: 800px;
+      width: 90%;
     }
 
     img.logo {
-      max-width: 300px;
+      max-width: 280px;
       height: auto;
-      margin-bottom: 20px;
-      filter: drop-shadow(0 0 15px #00ffa3) drop-shadow(0 0 25px #dc1fff);
-      animation: pulse 2.5s infinite;
+      margin-bottom: 30px;
+      animation: pulseGlow 3s infinite ease-in-out;
     }
 
-    @keyframes pulse {
+    @keyframes pulseGlow {
       0% { filter: drop-shadow(0 0 10px #00ffa3) drop-shadow(0 0 20px #dc1fff); }
-      50% { filter: drop-shadow(0 0 20px #00ffa3) drop-shadow(0 0 40px #dc1fff); }
+      50% { filter: drop-shadow(0 0 25px #00ffa3) drop-shadow(0 0 40px #dc1fff); }
       100% { filter: drop-shadow(0 0 10px #00ffa3) drop-shadow(0 0 20px #dc1fff); }
     }
 
     h1 {
       font-size: 2.2rem;
-      margin: 10px 0 5px 0;
+      margin: 10px 0;
       background: linear-gradient(90deg, #00ffa3, #dc1fff);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      line-height: 1.3;
+    }
+
+    h1 span {
+      display: block;
     }
 
     p {
       font-size: 1.2rem;
       max-width: 600px;
-      margin: 10px auto 0;
+      margin: 10px auto 30px;
       color: #cccccc;
     }
 
     .twitter-link {
-      margin-top: 30px;
+      display: inline-block;
       padding: 12px 24px;
       background: linear-gradient(90deg, #00ffa3, #dc1fff);
       color: black;
@@ -78,19 +83,42 @@
       font-weight: bold;
       box-shadow: 0 0 10px #00ffa3, 0 0 20px #dc1fff;
       transition: all 0.2s ease-in-out;
-      display: inline-block;
     }
 
     .twitter-link:hover {
       transform: scale(1.05);
       box-shadow: 0 0 15px #00ffa3, 0 0 30px #dc1fff;
     }
+
+    @media (max-width: 600px) {
+      .content-tile {
+        padding: 30px 20px;
+      }
+
+      img.logo {
+        max-width: 200px;
+        margin-bottom: 20px;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+      .twitter-link {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+      }
+    }
   </style>
 </head>
 <body>
   <div class="content-tile">
     <img src="wcmcd_logo_BG.png" alt="WCMCD Logo" class="logo" />
-    <h1>A new era of memecoin madness.<br/>Stay tuned.</h1>
+    <h1>A new era of memecoin madness.<span>Stay tuned.</span></h1>
     <p>We're quietly building the most degenerate global action in crypto history.</p>
     <a href="https://x.com/wcmcd_official" class="twitter-link" target="_blank">Follow us on Twitter</a>
   </div>
