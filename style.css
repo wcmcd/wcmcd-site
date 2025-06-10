@@ -1,0 +1,23 @@
+body {
+  background-color: #0b0c10;
+  color: #ffffff;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  padding: 2rem;
+  margin: 0;
+}
+
+img.logo {
+  width: 220px;
+  margin-bottom: 2rem;
+}
+
+a {
+  color: #00d1c1;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #ff00cc;
+}
