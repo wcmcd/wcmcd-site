@@ -10,12 +10,12 @@
       margin: 0;
       padding: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #050505, #151122, #0b0c1c);
+      background: linear-gradient(135deg, #05030f, #1a1835, #0e0e1c);
       background-size: 400% 400%;
       animation: gradientBG 15s ease infinite;
       color: #f0f0f0;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
       min-height: 100vh;
     }
@@ -26,28 +26,31 @@
       100% { background-position: 0% 50%; }
     }
 
-    .content-tile {
-      background: rgba(20, 20, 30, 0.75);
-      border-radius: 20px;
-      padding: 40px 50px;
-      text-align: center;
-      box-shadow: 0 0 30px #00ffa3, 0 0 60px #dc1fff;
-      backdrop-filter: blur(10px);
-      max-width: 800px;
-      width: 90%;
-    }
-
     img.logo {
-      max-width: 280px;
+      max-width: 300px;
       height: auto;
-      margin-bottom: 30px;
-      animation: pulseGlow 3s infinite ease-in-out;
+      margin-bottom: 20px;
+      filter: drop-shadow(0 0 10px #00ffa3) drop-shadow(0 0 20px #dc1fff);
+      animation: pulse 2s infinite ease-in-out;
     }
 
-    @keyframes pulseGlow {
-      0% { filter: drop-shadow(0 0 10px #00ffa3) drop-shadow(0 0 20px #dc1fff); }
-      50% { filter: drop-shadow(0 0 25px #00ffa3) drop-shadow(0 0 40px #dc1fff); }
-      100% { filter: drop-shadow(0 0 10px #00ffa3) drop-shadow(0 0 20px #dc1fff); }
+    @keyframes pulse {
+      0%, 100% {
+        filter: drop-shadow(0 0 10px #00ffa3) drop-shadow(0 0 20px #dc1fff);
+      }
+      50% {
+        filter: drop-shadow(0 0 20px #00ffa3) drop-shadow(0 0 40px #dc1fff);
+      }
+    }
+
+    .content-tile {
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 16px;
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 0 40px rgba(220, 31, 255, 0.3), 0 0 20px rgba(0, 255, 163, 0.2);
+      max-width: 90%;
+      margin: 0 20px;
     }
 
     h1 {
@@ -56,24 +59,17 @@
       background: linear-gradient(90deg, #00ffa3, #dc1fff);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      line-height: 1.3;
-    }
-
-    h1 span {
-      display: block;
     }
 
     p {
       font-size: 1.2rem;
       max-width: 600px;
-      margin: 10px auto 30px;
+      margin: 10px auto 0;
       color: #cccccc;
     }
 
     .twitter-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
+      margin-top: 30px;
       padding: 12px 24px;
       background: linear-gradient(90deg, #00ffa3, #dc1fff);
       color: black;
@@ -85,62 +81,32 @@
       font-weight: bold;
       box-shadow: 0 0 10px #00ffa3, 0 0 20px #dc1fff;
       transition: all 0.2s ease-in-out;
-      animation: pulseButton 4s infinite ease-in-out;
-    }
-
-    @keyframes pulseButton {
-      0% { transform: scale(1); box-shadow: 0 0 10px #00ffa3, 0 0 20px #dc1fff; }
-      50% { transform: scale(1.03); box-shadow: 0 0 15px #00ffa3, 0 0 30px #dc1fff; }
-      100% { transform: scale(1); box-shadow: 0 0 10px #00ffa3, 0 0 20px #dc1fff; }
+      display: inline-flex;
+      align-items: center;
     }
 
     .twitter-link:hover {
-      transform: scale(1.06);
+      transform: scale(1.05);
+      box-shadow: 0 0 15px #00ffa3, 0 0 30px #dc1fff;
     }
 
-    .x-logo {
-      width: 18px;
-      height: 18px;
-    }
-
-    @media (max-width: 600px) {
-      .content-tile {
-        padding: 30px 20px;
-      }
-
-      img.logo {
-        max-width: 200px;
-        margin-bottom: 20px;
-      }
-
-      h1 {
-        font-size: 1.5rem;
-      }
-
-      p {
-        font-size: 1rem;
-      }
-
-      .twitter-link {
-        padding: 10px 20px;
-        font-size: 0.9rem;
-      }
-
-      .x-logo {
-        width: 16px;
-        height: 16px;
-      }
+    .x-inline-logo {
+      width: 1em;
+      height: 1em;
+      vertical-align: middle;
+      margin-left: 0.3em;
+      filter: brightness(0) invert(1);
     }
   </style>
 </head>
 <body>
+  <img src="wcmcd_logo_BG.png" alt="WCMCD Logo" class="logo" />
   <div class="content-tile">
-    <img src="wcmcd_logo_BG.png" alt="WCMCD Logo" class="logo" />
-    <h1>A new era of memecoin madness.<span>Stay tuned.</span></h1>
+    <h1>A new era of memecoin madness.<br>Stay tuned.</h1>
     <p>We're quietly building the most degenerate global action in crypto history.</p>
     <a href="https://x.com/wcmcd_official" class="twitter-link" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/X_logo_2023.svg" alt="X logo" class="x-logo" />
-      Follow us on X
+      Follow us on
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/X_logo_2023.svg" alt="X" class="x-inline-logo" />
     </a>
   </div>
 </body>
