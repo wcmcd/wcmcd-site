@@ -15,8 +15,9 @@
       animation: gradientBG 15s ease infinite;
       color: #f0f0f0;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
+      justify-content: center;
       min-height: 100vh;
       overflow: hidden;
     }
@@ -27,19 +28,13 @@
       100% { background-position: 0% 50%; }
     }
 
-    .tile {
-      background-color: rgba(10, 10, 25, 0.85);
-      padding: 40px;
-      border-radius: 20px;
-      box-shadow: 0 0 20px rgba(0, 255, 163, 0.4), 0 0 40px rgba(220, 31, 255, 0.2);
-      text-align: center;
-      max-width: 700px;
+    .logo-container {
+      margin-bottom: 20px;
     }
 
     img.logo {
       max-width: 300px;
       height: auto;
-      margin-bottom: 30px;
       filter: drop-shadow(0 0 10px #00ffa3) drop-shadow(0 0 20px #dc1fff);
       animation: pulse 2.5s infinite;
     }
@@ -51,6 +46,15 @@
       50% {
         filter: drop-shadow(0 0 20px #00ffa3) drop-shadow(0 0 30px #dc1fff);
       }
+    }
+
+    .tile {
+      background-color: rgba(10, 10, 25, 0.85);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0, 255, 163, 0.4), 0 0 40px rgba(220, 31, 255, 0.2);
+      text-align: center;
+      max-width: 700px;
     }
 
     h1 {
@@ -91,7 +95,7 @@
       box-shadow: 0 0 15px #00ffa3, 0 0 30px #dc1fff;
     }
 
-    .twitter-link img {
+    .twitter-icon {
       height: 20px;
       width: 20px;
       margin-left: 4px;
@@ -99,12 +103,14 @@
   </style>
 </head>
 <body>
-  <div class="tile">
+  <div class="logo-container">
     <img src="wcmcd_logo_BG.png" alt="WCMCD Logo" class="logo" />
+  </div>
+  <div class="tile">
     <h1>A new era of memecoin madness.<br>Stay tuned.</h1>
     <p>We're quietly building the most degenerate global action in crypto history.</p>
     <a href="https://x.com/wcmcd_official" class="twitter-link" target="_blank">
-      Follow us on <img src="X_logo_2023.svg.png" alt="X logo" />
+      Follow us on <img src="/mnt/data/X_logo_2023.svg.png" alt="X logo" class="twitter-icon" />
     </a>
   </div>
 </body>
