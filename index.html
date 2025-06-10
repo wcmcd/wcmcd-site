@@ -9,17 +9,16 @@
     body {
       margin: 0;
       padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #0a0a23, #1c1c3c, #151528);
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(135deg, #0a0a1f, #1b1b3a, #12121f);
       background-size: 400% 400%;
       animation: gradientBG 15s ease infinite;
       color: #f0f0f0;
       display: flex;
-      flex-direction: column;
-      align-items: center;
       justify-content: center;
+      align-items: center;
       min-height: 100vh;
-      overflow: hidden;
+      text-align: center;
     }
 
     @keyframes gradientBG {
@@ -28,55 +27,49 @@
       100% { background-position: 0% 50%; }
     }
 
-    .logo-container {
-      margin-bottom: 20px;
+    .container {
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(0, 255, 163, 0.2), 0 0 50px rgba(220, 31, 255, 0.2);
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(10px);
+      max-width: 90%;
     }
 
-    img.logo {
+    .logo {
       max-width: 300px;
       height: auto;
+      margin-bottom: 30px;
       filter: drop-shadow(0 0 10px #00ffa3) drop-shadow(0 0 20px #dc1fff);
-      animation: pulse 2.5s infinite;
+      animation: glowPulse 3s infinite;
     }
 
-    @keyframes pulse {
+    @keyframes glowPulse {
       0%, 100% {
         filter: drop-shadow(0 0 10px #00ffa3) drop-shadow(0 0 20px #dc1fff);
       }
       50% {
-        filter: drop-shadow(0 0 20px #00ffa3) drop-shadow(0 0 30px #dc1fff);
+        filter: drop-shadow(0 0 20px #00ffa3) drop-shadow(0 0 40px #dc1fff);
       }
-    }
-
-    .tile {
-      background-color: rgba(10, 10, 25, 0.85);
-      padding: 40px;
-      border-radius: 20px;
-      box-shadow: 0 0 20px rgba(0, 255, 163, 0.4), 0 0 40px rgba(220, 31, 255, 0.2);
-      text-align: center;
-      max-width: 700px;
     }
 
     h1 {
       font-size: 2.2rem;
-      margin: 10px 0;
+      margin: 0.5rem 0;
       background: linear-gradient(90deg, #00ffa3, #dc1fff);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
-    p {
-      font-size: 1.2rem;
+    .subhead {
+      font-size: 1.3rem;
+      color: #ccc;
       max-width: 600px;
-      margin: 20px auto 30px;
-      color: #cccccc;
+      margin: 1rem auto;
     }
 
     .twitter-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      margin-top: 20px;
+      margin-top: 30px;
       padding: 12px 24px;
       background: linear-gradient(90deg, #00ffa3, #dc1fff);
       color: black;
@@ -87,6 +80,9 @@
       text-decoration: none;
       font-weight: bold;
       box-shadow: 0 0 10px #00ffa3, 0 0 20px #dc1fff;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
       transition: all 0.2s ease-in-out;
     }
 
@@ -95,23 +91,47 @@
       box-shadow: 0 0 15px #00ffa3, 0 0 30px #dc1fff;
     }
 
-    .twitter-icon {
-      height: 20px;
+    .twitter-logo {
       width: 20px;
-      margin-left: 4px;
+      height: 20px;
+    }
+
+    @media (max-width: 600px) {
+      .logo {
+        max-width: 200px;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      .subhead {
+        font-size: 1rem;
+      }
+
+      .twitter-link {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+      }
+
+      .twitter-logo {
+        width: 16px;
+        height: 16px;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="logo-container">
+  <div class="main-content">
     <img src="wcmcd_logo_BG.png" alt="WCMCD Logo" class="logo" />
-  </div>
-  <div class="tile">
-    <h1>A new era of memecoin madness.<br>Stay tuned.</h1>
-    <p>We're quietly building the most degenerate global action in crypto history.</p>
-    <a href="https://x.com/wcmcd_official" class="twitter-link" target="_blank">
-      Follow us on <img src="/mnt/data/X_logo_2023.svg.png" alt="X logo" class="twitter-icon" />
-    </a>
+    <div class="container">
+      <h1>A new era of memecoin madness.<br>Stay tuned.</h1>
+      <p class="subhead">We're quietly building the most degenerate global action in crypto history.</p>
+      <a href="https://x.com/wcmcd_official" class="twitter-link" target="_blank">
+        Follow us on 
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAMAAAANIilAAAAAZlBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////8eG1u3AAAAKHRSTlMAAQIEBQcICQoLDA0ODxARExQVFhcYGRobHB0eHyAhIiMlJicoKSorLC0uLzAyNDmDEegAAAHmSURBVEjH7ZbZdoMgDEXHoXDvQKjd93+oSxHQUtqz9PhSS6SFCYyyvQZ/1n9gswszz7NQKpdHCiUkLS4hKYKWgpRQUlj0iwNGWjQHh5Qt0xqIYYjzkV8BJ+ZpGM1ljAeKRW6pvFdtd4acVm8tcAZyfjcwQ7YAeQFThFZ8+yDawtBvsf0uwKaKnxZb3yH/DrV+7f83HaEtx5bXtWRfevHUy+z+7cz9ZZ5qpV1rmjq7blKHXNfRf09KOl3Wwl66o0rsfYx3UmcNbLCYf8ddg/Y0eRXPkERH3FOzOZXmfAK+jLvdvAtvvLJ7gpiB/RxlCm4HpkZyTkeYCO1Y6YMyTdCZ0cyxEeQV4JkW0LCRKqslCTvErM8RWcik+xw4iXkR1s8vKi/n3U4i85YYc2aHgkQwdbDPEsBxG6R3Z9Gq1Ht0GE+OIJhQcz/24GQ6odf5Aw70Y3BshWrJgAAAABJRU5ErkJggg==" alt="X logo" class="twitter-logo" />
+      </a>
+    </div>
   </div>
 </body>
 </html>
